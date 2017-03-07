@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Add a photo to Firebase</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- RSVP -->
+    <script src="https://unpkg.com/rsvp@3.1.0/dist/rsvp.min.js"></script>
+
+    <!-- GeoFire -->
+    <script src="https://cdn.firebase.com/libs/geofire/4.1.0/geofire.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/addphoto.js" defer></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/fish1.css">
+  </head>
+
+  <body>
+    <!-- Input fields. No error control so all must a value -->
+    <div id="fields">
+  <h2>Add a photo</h2>
+    <h3>Warning, this example does not have any errorcorrection or feedback</h3>
+
+  <input type="text"  color=#black placeholder="Title" id="title">
+  <br>  
+  <input type="text"  color=#black placeholder="Description" id="description">
+    <br>
+  <input type="text"  color=#black placeholder="Thumbnail_url" id="thumbnail_url">
+    <br>
+  <input type="text"  color=#black placeholder="Photo_url" id="photo_url">
+    <br>
+  <input type="text"  color=#black placeholder="Lat" id="lat">
+    <br>
+  <input type="text"  color=#black placeholder="Lon" id="lon">
+    <br>
+
+<button  onclick="_addphoto(document.getElementById('title').value,
+document.getElementById('description').value,
+document.getElementById('thumbnail_url').value,
+document.getElementById('photo_url').value,
+document.getElementById('lat').value,
+document.getElementById('lon').value)
+ ">Add photo</button>
+
+    </div>
+
+    <!-- Message log -->
+    <div id="log"></div>
+  </body>
+</html>
