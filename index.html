@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Add a photo to Firebase</title>
+    <title>Add a photo to Firebase and Geofire</title>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
@@ -22,11 +22,11 @@
   <body>
     <!-- Input fields. No error control so all must a value -->
     <div id="fields">
-  <h2>Add a photo</h2>
+  <h2>Add a photo to Firebase and Geofire</h2>
     <h3>Warning, this example does not have any errorcorrection or feedback</h3>
 
   <input type="text"  color=#black placeholder="Title" id="title">
-  <br>  
+  <br>
   <input type="text"  color=#black placeholder="Description" id="description">
     <br>
   <input type="text"  color=#black placeholder="Thumbnail_url" id="thumbnail_url">
@@ -46,7 +46,19 @@ document.getElementById('lat').value,
 document.getElementById('lon').value)
  ">Add photo</button>
 
+
     </div>
+<div>
+  <input type="text"  color=#black placeholder="Lat" id="lat">
+    <br>
+  <input type="text"  color=#black placeholder="Lon" id="lon">
+    <br>
+
+     <button  onclick="_getphoto(document.getElementById('lat').value,
+     document.getElementById('lon').value)">Get photo</button>
+
+
+</div>
 
     <!-- Message log -->
     <div id="log"></div>
